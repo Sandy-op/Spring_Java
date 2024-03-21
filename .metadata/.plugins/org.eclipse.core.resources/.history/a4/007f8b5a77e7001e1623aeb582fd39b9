@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- setter Injection By Nested bean -->
+	<bean id="myBike" class="org.jsp.springpractice.Bike">
+		<property name="brand" value="KTM"/>
+		<property name="engine">
+			<bean class="org.jsp.springpractice.Engine"/>
+		</property>
+	</bean>
+	<!-- setter Injection BY ref attribute -->
+	<bean id="engine" class="org.jsp.springpractice.Bike"/>
+	<bean id="yourBike" class="org.jsp.sprignpractice.Bike">
+		<property name="brand" value="Hayabusa"/>
+		<property name="engine" ref="engine"/>
+	</bean>
+</beans>

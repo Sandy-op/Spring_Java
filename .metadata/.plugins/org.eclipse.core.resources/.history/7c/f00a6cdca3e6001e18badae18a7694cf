@@ -1,0 +1,6 @@
+<beans>
+	<bean id="account" class="org.jsp.springpractice.BankAccount"></bean>
+	<property name="name" value="ABCD" />
+	<property name="balance" value="54321" />
+
+</beans>
