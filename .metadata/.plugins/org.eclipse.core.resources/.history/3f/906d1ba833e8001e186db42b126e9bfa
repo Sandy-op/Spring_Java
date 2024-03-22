@@ -6,20 +6,20 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springframework.org/schema/context
             http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-	<!-- Setter Injection By Nested bean -->
-	<!-- <bean id="myBike" class="org.jsp.springpractice.Bike">
+	<!-- <!-- Setter Injection By Nested bean -->
+	<bean id="myBike" class="org.jsp.springpractice.Bike">
 		<property name="brand" value="KTM" />
 		<property name="engine">
 			<bean class="org.jsp.springpractice.Engine" />
 		</property>
-	</bean> -->
-	<!-- Setter Injection By ref attribute -->
-	<!-- <bean id="engine" class="org.jsp.springpractice.Engine" />
+	</bean>
+	Setter Injection By ref attribute
+	<bean id="engine" class="org.jsp.springpractice.Engine" />
 	<bean id="yourBike" class="org.jsp.springpractice.Bike">
 		<property name="brand" value="Hayabusa" />
 		<property name="engine" ref="engine" />
-	</bean> -->
-	<!-- Constructor Injection by ref attribute -->
+	</bean>
+	Constructor Injection by ref attribute -->
 	<bean id="engine" class="org.jsp.springpractice.Engine">
 	</bean>
 	<bean id="myBus" class="org.jsp.springpractice.Bus">
