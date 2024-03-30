@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<!-- Setter Injection By Nested bean -->
+	<!-- <bean id="myBike" class="org.jsp.springpractice.Bike">
+		<property name="brand" value="KTM" />
+		<property name="engine">
+			<bean class="org.jsp.springpractice.Engine" />
+		</property>
+	</bean> -->
+	<!-- Setter Injection By ref attribute -->
+	<!-- <bean id="engine" class="org.jsp.springpractice.Engine" />
+	<bean id="yourBike" class="org.jsp.springpractice.Bike">
+		<property name="brand" value="Hayabusa" />
+		<property name="engine" ref="engine" />
+	</bean> -->
+	<!-- Constructor Injection by ref attribute -->
+	<bean id="engine" class="org.jsp.springpractice.Engine">
+	</bean>
+	<bean id="myBus" class="org.jsp.springpractice.Bus">
+		<constructor-arg name="engine" ref="engine" />
+	</bean>
+
+	<!-- Constructor Injection by Nested Bean -->
+	<bean id="urBus" class="org.jsp.springpractice.Bus">
+		<constructor-arg name="engine">
+			<bean class="org.jsp.springpractice.Engine" />
+		</constructor-arg>
+	</bean>
+
+</beans>

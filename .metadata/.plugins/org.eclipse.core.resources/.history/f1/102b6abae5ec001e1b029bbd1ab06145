@@ -1,0 +1,9 @@
+package org.jsp.hibernatetemplatepractice.dto;
+@
+import javax.persistence.Entity;
+
+@Entity
+public class User {
+	private int id;
+
+}

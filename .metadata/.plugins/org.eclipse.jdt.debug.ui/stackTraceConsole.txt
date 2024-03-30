@@ -1,0 +1,5 @@
+@Override
+	public void destroy() throws Exception {
+		System.out.println("Demo has been destroyed");
+
+	}

@@ -1,0 +1,5 @@
+package org.jsp.hibernatetemplatepractice.dto;
+
+public class User {
+
+}
