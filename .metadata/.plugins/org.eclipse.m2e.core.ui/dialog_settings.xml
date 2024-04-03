@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/home/stark/Desktop/Jspider/Spring /Spring Workspace/spring-annotations"/>
+			<item value="/home/stark/Desktop/Jspider/Spring /Spring Workspace"/>
 			<item value="/home/stark/Desktop/Jspider/Spring /Spring Workspace/spring-orm-practice"/>
 			<item value="/home/stark/Desktop/jspider/Spring Workspace/springautowiring"/>
 		</list>
@@ -45,11 +47,16 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="org.jsprider"/>
+			<item value="org.jspider"/>
 			<item value="org.jsp"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="spring-container"/>
+			<item value="spring-annotations"/>
+			<item value="spring-annotation-demo"/>
 			<item value="Jdbc-template-practice"/>
 			<item value="spring-orm-practice"/>
 			<item value="spring-practice"/>
@@ -68,6 +75,14 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
