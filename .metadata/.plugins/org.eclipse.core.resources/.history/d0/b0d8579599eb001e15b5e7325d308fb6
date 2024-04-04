@@ -1,7 +1,0 @@
-package springpraacticeAutoWiring;
-
-
-	public interface Vehicle{
-		void startRide();
-	}
-
