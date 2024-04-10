@@ -13,6 +13,6 @@ public class TestMySessionFactory {
 		System.out.println("Url: " + factory.getDataSource().getUrl());
 		System.out.println("Mapping Resource: " + factory.getMappingResources());
 		System.out.println("Hibernate Properties: " + factory.getHibernateProperties());
-		((AnnotationConfigApplicationContext)context).close();
+		((AnnotationConfigApplicationContext) context).close();
 	}
 }

@@ -14,10 +14,10 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("app.properties")
 public class MyConfig {
 	@Bean
-	public List<String> mappingResources(){
+	public List<String> mappingResources() {
 		return Arrays.asList("user.hbm.xml", "employee.hbm.xml");
 	}
-	
+
 	@Bean
 	public Properties hibernateProperties() {
 		Properties p = new Properties();

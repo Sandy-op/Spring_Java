@@ -2,8 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="/home/stark/Desktop/Jspider/Spring /Spring Workspace/spring-annotations"/>
 			<item value="/home/stark/Desktop/Jspider/Spring /Spring Workspace"/>
+			<item value="/home/stark/Desktop/Jspider/Spring /Spring Workspace/spring-annotations"/>
 			<item value="/home/stark/Desktop/Jspider/Spring /Spring Workspace/spring-orm-practice"/>
 			<item value="/home/stark/Desktop/jspider/Spring Workspace/springautowiring"/>
 		</list>
@@ -47,13 +47,16 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="org.jsp"/>
 			<item value="org.jsprider"/>
 			<item value="org.jspider"/>
-			<item value="org.jsp"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="spring-annotation-test-practice"/>
+			<item value="spring-emp-app"/>
+			<item value="spring-annotation-practice"/>
 			<item value="spring-container"/>
 			<item value="spring-annotations"/>
 			<item value="spring-annotation-demo"/>
