@@ -38,6 +38,25 @@ public class MerchantController {
 			System.out.println("Merchant saved with id " + merchant.getId());
 			break;
 		}
+		case 2:{
+			Merchant merchant = new Merchant();
+			System.out.println("Enter merchant id to update");
+			merchant.setId(sc.nextInt());
+			System.out.println("Enter Merchant name:");
+			merchant.setName(sc.next());
+			System.out.println("Enter Merchant phone no:");
+			merchant.setPhone(sc.nextLong());
+			System.out.println("Enter Merchant email id:");
+			merchant.setEmail(sc.next());
+			System.out.println("Enter merchant gst no.:");
+			merchant.setGst_number(sc.next());
+			System.out.println("Enter password:");
+			merchant.setPassword(sc.next());
+			merchant = merchantDao.updateMerchant(merchant);
+			System.out.println("Merchant with id " + merchant.getId()+" updated");
+			break;
+			
+		}
 		default: {
 			System.err.println("Invalid Choice");
 			sc.close();

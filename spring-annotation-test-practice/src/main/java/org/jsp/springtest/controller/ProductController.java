@@ -1,5 +1,6 @@
 package org.jsp.springtest.controller;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.jsp.springtest.MerchantConfig;
@@ -18,6 +19,8 @@ public class ProductController {
 		System.out.println("2.Update Product");
 		System.out.println("3.Fetch product by product id");
 		System.out.println("4.Fetch product by merchant id");
+		System.out.println("5.Fetch product by category");
+		
 		switch (sc.nextInt()) {
 		case 1: {
 			Product product = new Product();
@@ -49,9 +52,47 @@ public class ProductController {
 			product.setImg_url(sc.next());
 			product = productDao.updateProduct(product);
 			if (product != null) {
-				System.out.println("Product with id "+product.getId()+" updated");
+				System.out.println("Product with id " + product.getId() + " updated");
 			} else {
 				System.err.println("Cannot update product as product id is invalid");
+			}
+			break;
+		}
+		case 3: {
+			Product product = new Product();
+			System.out.println("Enter product id to find product");
+			int product_id = sc.nextInt();
+			product = productDao.findProductById(product_id);
+			if (product != null) {
+				System.out.println(product);
+			} else {
+				System.err.println("Invalid product id");
+			}
+			break;
+		}
+		case 4: {
+			System.out.println("Enter Merchant id to find product");
+			int merchant_id = sc.nextInt();
+			List<Product> product = productDao.findProductByMerchantId(merchant_id);
+			if (product.isEmpty()) {
+				System.err.println("No product found with entered merchant id");
+			} else {
+				for (Product products : product) {
+					System.out.println(products);
+				}
+			}
+			break;
+		}
+		case 5:{
+			System.out.println("Enter product category to find product");
+			String category = sc.next();
+			List<Product> product = productDao.fetchProductByCategory(category);
+			if (product.isEmpty()) {
+				System.err.println("No product found with entered merchant id");
+			} else {
+				for (Product products : product) {
+					System.out.println(products);
+				}
 			}
 			break;
 		}

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 
 import org.jsp.springtest.dto.Merchant;
 import org.jsp.springtest.dto.Product;
@@ -31,9 +32,9 @@ public class ProductDao {
 		}
 		return null;
 	}
-	
+
 	public Product updateProduct(Product product) {
-	Product dbproduct = entityManager.find(Product.class, product.getId());
+		Product dbproduct = entityManager.find(Product.class, product.getId());
 		EntityTransaction entityTransaction = entityManager.getTransaction();
 		if (dbproduct != null) {
 			dbproduct.setName(product.getName());
@@ -46,6 +47,24 @@ public class ProductDao {
 			return dbproduct;
 		}
 		return null;
+	}
+
+	public Product findProductById(int id) {
+		return entityManager.find(Product.class, id);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Product> findProductByMerchantId(int id){
+		Query q = entityManager.createQuery("select m.products from Merchant m where m.id=?1");
+		q.setParameter(1, id);
+		return q.getResultList();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Product> fetchProductByCategory(String category) {
+		Query q = entityManager.createQuery("select p from Product p where p.category=?1");
+		q.setParameter(1, category);
+		return q.getResultList();
 	}
 
 }
