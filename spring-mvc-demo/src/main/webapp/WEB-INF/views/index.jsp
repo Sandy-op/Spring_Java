@@ -1,6 +1,6 @@
 <html>
 <body bgcolor="lightgreen">
-	<h2>Hello MotherFucker...!!</h2>
+	<h2>Welcome to to World of Dark</h2>
 	<a href="open-home">Click here to open Home page</a>
 
 	<h2>
